@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="stylesheet" media="screen and (max-width: 1200px)" href="css/layout_tablet.css">
     <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/layout_smartphone.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="menu.css">
+    <script src="https://kit.fontawesome.com/4af9ca4cb4.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -19,6 +21,9 @@
                 <a href="#endereco">Endereço</a>
                 <a class="botao" href="mailto:exemplo@email.com">Contate-nos</a>
             </nav>
+            <a class="menu-barras" onclick="mostrarMenu()">
+                <span id="icone" class="fas fa-bars"></span>
+                </a>
             
         </div>
     </header>
@@ -26,7 +31,7 @@
         <div class="banner">
             <div class="container-grid conteudo-banner">
                 <div class="texto-banner">
-                    <h1>cursos técnicos senai</h1>
+                    <h1>cursos técnicos <b>senai</b></h1>
                     <div class="linha-amarela"></div>
                     <span class="titulo-senai">Senai Informática</span>
                 </div>
@@ -67,7 +72,7 @@
                 <div class="texto-endereco">
                     <p>Av. Sen. Roberto Símonsen, 550 - Jardim Imperador, Suzano - SP, 08673-270</p>
                 </div>
-                <a href=https://goo.gl/maps/Wh6hbeFS51RCSmJQ9 target="blank"><img class="mapa" src="imagens/mapa.png" alt="Mapa mostrando a localização da escola."></a>
+                <a href=https://goo.gl/maps/S47QXNknq3kfFCtLA target="blank"><img class="mapa" src="imagens/mapa.png" alt="Mapa mostrando a localização da escola."></a>
             </div>
         </section>
     </main>
@@ -75,5 +80,24 @@
         <span>Copyright &copy; 2023 - Escola Senai de Informática</span>
     </footer>
   
+
+    <script>
+        function mostrarMenu() {
+            var menu= document.getElementById("menu-header");
+            var icone = document.getElementById("icone");
+
+            if(getComputedStyle(menu).display=='none') {
+                menu.style.display="flex";
+                icone.classList.remove("fa-bars");
+                icone.classList.add("fa-times");
+            }
+            else{
+                menu.style.display = "none";
+                icone.classList.remove("fa-times");
+                icone.classList.add("fa-bars");
+            }
+        }
+    </script>
+
 </body>
 </html>

@@ -10,6 +10,18 @@
     width: 100%;
 }
 
+.menu-header {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.90);
+    position: absolute;
+    top: 80px;
+    left: 0px;
+    height: 300px;
+    width: 100%;
+}
+
 .menu-barras{
     display: initial;
 }
@@ -26,7 +38,14 @@
 .imagem-sobre {
     width: 100%;
 }
-
+.sobre-projetos h2 {
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    border-bottom: 1px #FFAF00 solid;
+    width: 565px;
+}
 .texto-sobre {
     width: 100%;
     height: unset;
